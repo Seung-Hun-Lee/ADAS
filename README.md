@@ -4,6 +4,20 @@
 ## Requirements
 Pytorch >= 1.8.0
 You need GPU with no less than 32G memory.
+
+## Installation
+
+```bash
+conda create --name adas python=3.8 -y
+conda activate adas
+pip install torch==1.8.0+cu111 torchvision==0.9.0+cu111 torchaudio==0.8.0 -f https://download.pytorch.org/whl/torch_stable.html
+
+
+git clone git@https://github.com/Seung-Hun-Lee/ADAS.git
+cd ADAS
+pip install -r requirements.txt
+```
+
 ## Data Preparation
 Download [GTA5](https://download.visinf.tu-darmstadt.de/data/from_games/), [Cityscapes](https://www.cityscapes-dataset.com/), [IDD](https://idd.insaan.iiit.ac.in/), [Mapillary](https://www.mapillary.com/datasets)
 ## Folder Structure of Datasets
