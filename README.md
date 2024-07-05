@@ -101,7 +101,7 @@ python test.py -D G C I M -N 19 --load_seg [trained network]
 
 
 ## Citation
-'''BibTeX
+```BibTeX
 @inproceedings{lee2022adas,
   title={Adas: A direct adaptation strategy for multi-target domain adaptive semantic segmentation},
   author={Lee, Seunghun and Choi, Wonhyeok and Kim, Changjae and Choi, Minwoo and Im, Sunghoon},
@@ -109,7 +109,7 @@ python test.py -D G C I M -N 19 --load_seg [trained network]
   pages={19196--19206},
   year={2022}
 }
-'''
+```
 
 
 
