@@ -2,9 +2,7 @@
 ### Pytorch implementation of paper:
 ### [Seunghun Lee, Wonhyeok Choi, Changjae Kim, Minwoo Choi, Sunghoon Im, "ADAS: A Direct Adaptation Strategy for Multi-Target Domain Adaptive Semantic Segmentation", CVPR (2022)](https://arxiv.org/abs/2203.06811)
 
-<video src="assets/ADAS.mp4" autoplay loop muted>
-  Your browser does not support the video tag.
-</video>
+![ADAS](assets/ADAS.mp4)
 
 
 
