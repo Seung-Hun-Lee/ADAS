@@ -18,7 +18,7 @@ You need GPU with no less than 24G memory.
 conda create --name adas python=3.8 -y
 conda activate adas
 pip install torch==1.8.0+cu111 torchvision==0.9.0+cu111 torchaudio==0.8.0 -f https://download.pytorch.org/whl/torch_stable.html
-pip install tensorboardX scikit-image tqdm matplotlib
+pip install tensorboardX scikit-image==0.19 tqdm matplotlib
 ```
 
 ## Getting Started
