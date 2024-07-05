@@ -1,6 +1,13 @@
 # ADAS (CVPR 2022)
 ### Pytorch implementation of paper:
 ### [Seunghun Lee, Wonhyeok Choi, Changjae Kim, Minwoo Choi, Sunghoon Im, "ADAS: A Direct Adaptation Strategy for Multi-Target Domain Adaptive Semantic Segmentation", CVPR (2022)](https://arxiv.org/abs/2203.06811)
+
+<video src="assets/ADAS.mp4" autoplay loop muted>
+  Your browser does not support the video tag.
+</video>
+
+
+
 ## Requirements
 Pytorch >= 1.8.0
 You need GPU with no less than 24G memory.
