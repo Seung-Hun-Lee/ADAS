@@ -1,36 +1,35 @@
-## Train
+## Training
 
 
-1. Source only
+### 1. Source only
+
 ```
-sh scripts
+sh scripts/19/soucre_only/source_only_19.sh
 ```
 
 
-1. MTDT-Net (image to multi-target images)
+### 2. MTDT-Net
+
 ```
-python MTDT_train.py -D [datasets] -N [num_classes] --iter [itrations] --ex [experiment_name]
-example) python MTDT_train.py -D G C I M -N 19 --iter 3000 --ex MTDT_19
+sh scripts/19/domain_transfer/train_MTDTNet_19.sh
 ```
-You can see the translated images on tensorboard.
+
+
+### 3. Warm up with AdaptSeg
+
 ```
-CUDA_VISIBLE_DEVICES=-1 tensorboard --logdir tensorboard --bind_all
+sh scripts/19/adaptation/AdaptSeg_MTDT_19.sh
 ```
-2. Pretraining (option)
+
+
+### 4. Domain adaptation with BARS
+
 ```
-python Source_Only.py -D G C I M -N 19 --iter 100000 --ex Source_Only_19
+sh scripts/19/adaptation/da_bars_19.sh
 ```
-3. Domain Adaptatoin with MTDT-Net
-```
-python MTDT_DA.py -D G C I M -N 19 --iter 200000 --load_mtdt checkpoint/MTDT_19/3000/netMTDT.pth --ex MTDT_DA_19
-(If you have pretrained model, you can add '--load_seg checkpoint/Source_Only_19/100000/netT.pth' option.)
-```
-4. Domain Adaptation with BARS
-```
-python BARS_DA.py -D G C I M -N 19 --iter 200000 --load_mtdt checkpoint/MTDT_19/3000/netMTDT.pth --load_seg checkpoint/MTDT_DA_19/200000/netT.pth --ex BARS_DA_19
-```
+
 
 ## Test
 ```
-python test.py -D G C I M -N 19 --load_seg [trained network]
+sh scripts/19/test/test_19.sh
 ```
