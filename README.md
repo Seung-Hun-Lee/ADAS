@@ -3,7 +3,7 @@
 ### [Seunghun Lee, Wonhyeok Choi, Changjae Kim, Minwoo Choi, Sunghoon Im, "ADAS: A Direct Adaptation Strategy for Multi-Target Domain Adaptive Semantic Segmentation", CVPR (2022)](https://arxiv.org/abs/2203.06811)
 ## Requirements
 Pytorch >= 1.8.0
-You need GPU with no less than 32G memory.
+You need GPU with no less than 24G memory.
 
 ## Installation
 
@@ -22,31 +22,38 @@ pip install -r requirements.txt
 ## Data Preparation
 Download [GTA5](https://download.visinf.tu-darmstadt.de/data/from_games/), [Cityscapes](https://www.cityscapes-dataset.com/), [IDD](https://idd.insaan.iiit.ac.in/), [Mapillary](https://www.mapillary.com/datasets)
 ## Folder Structure of Datasets
+You can set dataset roots in config.py. 
 ```
 ├── data
       ├── GTA5
-            ├── GT
-                   ├── 01_labels
-                   ├── 02_labels
-                   ├── ...
-            ├── Images
-                   ├── 01_images
-                   ├── 02_images
-                   ├── ...
+            ├── images
+                  ├── train
+                         ├── 01
+                         ├── 02
+                         ├── ...
+            ├── labels
+                  ├── train
+                         ├── 01
+                         ├── 02
+                         ├── ...
       ├── Cityscapes
-            ├── gtFine
-                   ├── train
-                   ├── val
-            ├── leftImg8bit
-                   ├── train
-                   ├── val
+            ├── leftImg8bit_trainvaltest
+                  ├── leftImg8bit
+                         ├── train
+                         ├── val
+            ├── gtFine_trainvaltest
+                  ├── gtFine
+                         ├── train
+                         ├── val
       ├── IDD
-            ├── gtFine
-                   ├── train
-                   ├── val
-            ├── leftImg8bit
-                   ├── train
-                   ├── val
+            ├── leftImg8bit_trainvaltest
+                  ├── leftImg8bit
+                         ├── train
+                         ├── val
+            ├── gtFine_trainvaltest
+                  ├── gtFine
+                         ├── train
+                         ├── val
       ├── mapillary
             ├── training
                    ├── images
@@ -56,6 +63,14 @@ Download [GTA5](https://download.visinf.tu-darmstadt.de/data/from_games/), [City
                    ├── labels
 ```
 ## Train
+
+
+1. Source only
+```
+sh scripts
+```
+
+
 1. MTDT-Net (image to multi-target images)
 ```
 python MTDT_train.py -D [datasets] -N [num_classes] --iter [itrations] --ex [experiment_name]
@@ -85,6 +100,18 @@ python test.py -D G C I M -N 19 --load_seg [trained network]
 ```
 
 
+## Citation
+'''BibTeX
+@inproceedings{lee2022adas,
+  title={Adas: A direct adaptation strategy for multi-target domain adaptive semantic segmentation},
+  author={Lee, Seunghun and Choi, Wonhyeok and Kim, Changjae and Choi, Minwoo and Im, Sunghoon},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={19196--19206},
+  year={2022}
+}
+'''
 
 
-more coming soon
+
+
+
