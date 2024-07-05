@@ -4,8 +4,9 @@
 
 
 <p align="center">
-<img src="https://github.com/Seung-Hun-Lee/ADAS/assets/75882468/e9e8bdac-9a87-4ec8-b162-cfa7bb1df296">
+<img src="https://github.com/Seung-Hun-Lee/ADAS/assets/75882468/e9e8bdac-9a87-4ec8-b162-cfa7bb1df296" width="500">
 </p>
+
 
 ## Requirements
 Pytorch >= 1.8.0
