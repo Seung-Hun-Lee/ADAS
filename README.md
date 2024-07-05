@@ -19,7 +19,10 @@ cd ADAS
 pip install -r requirements.txt
 ```
 
+## Getting Started
+See [Preparing Datasets for ADAS](data/README.md).
 
+See [Getting Started with ADAS](GETTING_STARTED.md).
 
 
 
