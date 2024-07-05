@@ -4,7 +4,7 @@
 
 
 <p align="center">
-<img src="https://github.com/Seung-Hun-Lee/ADAS/assets/75882468/e754166d-4927-46d0-984b-2aae21c04a9e">
+<img src="https://github.com/Seung-Hun-Lee/ADAS/assets/75882468/e9e8bdac-9a87-4ec8-b162-cfa7bb1df296">
 </p>
 
 ## Requirements
