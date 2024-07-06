@@ -6,7 +6,7 @@ We adopt Class uniform sampling proposed in [this paper](https://openaccess.thec
 
 #### We used [GTAV_Split](https://download.visinf.tu-darmstadt.de/data/from_games/code/read_mapping.zip) to split GTAV dataset into training/validation/test set. Please refer the txt files in [split_data](https://github.com/shachoi/RobustNet/tree/main/split_data).
 
-### You should modify the path in **"<path_to_robustnet>/config.py"** according to your dataset path.
+#### You should modify the path in **"<path_to_robustnet>/config.py"** according to your dataset path.
 ```
 #Cityscapes Dir Location
 __C.DATASET.CITYSCAPES_DIR = <YOUR_CITYSCAPES_PATH>
