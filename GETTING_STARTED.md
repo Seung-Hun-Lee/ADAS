@@ -16,7 +16,7 @@ Set the hyperparameters in each script. The main ones are as follows:
 '--tb_path' is the path where TensorBoard files will be saved.
 '--snapshot' is the path to the segmentation model to be loaded.
 '--DT_snapshot' is the path to the MTDT-Net to be loaded.
-For other parameters, refer to args.py.
+For other parameters, refer to [args.py](ADAS/args.py).
 
 ### 1. Train source-only model
 
