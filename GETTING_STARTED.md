@@ -2,7 +2,7 @@
 
 |    Target   | Cityscapes |  IDD | Mapillary | Model |
 |:-----------:|:----------:|:----:|:---------:|:-----:|
-| Source only |    37.2    | 36.1 |    37.9   |   *   |
+| Source only |    37.2    | 36.1 |    37.9   |   [model](https://drive.google.com/file/d/1Ng7SZ16PywNoG_PiudnvrYluZTrPIHj_/view?usp=drive_link)   |
 | Warm up (1) |    44.3    | 40.5 |    41.9   |   *   |
 | Warm up (2) |    46.3    | 43.9 |    47.6   |   *   |
 |     BARS    |    53.5    | 49.8 |    52.8   |   *   |
