@@ -21,11 +21,18 @@ pip install torch==1.8.0+cu111 torchvision==0.9.0+cu111 torchaudio==0.8.0 -f htt
 pip install tensorboardX scikit-image==0.19 tqdm matplotlib
 ```
 
+
 ## Getting Started
 See [Preparing Datasets for ADAS](data/README.md).
 
 See [Getting Started with ADAS](GETTING_STARTED.md).
 
+
+### Improvements (1)
+We regard the filtered pixels by BARS as hard samples and progressively learn a greater number of these hard samples each epoch. The option to activate this feature is '--curriculum', and it is controlled by '--incremental_ratio'.
+
+### Improvements (2)
+We extended the [DACS](https://arxiv.org/abs/2007.08702) method for self-training using BARS. Refer to [Domain_mixer.py](network/domain_mixer.py) for details.
 
 
 ## Citation
