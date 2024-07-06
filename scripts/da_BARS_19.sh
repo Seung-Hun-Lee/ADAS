@@ -1,0 +1,37 @@
+python -m torch.distributed.launch --nproc_per_node=4 train.py \
+    --train_mode Adaptation \
+    --source_dataset gtav \
+    --target_dataset cityscapes idd mapillary \
+    --DT_source_dataset gtav \
+    --DT_target_dataset cityscapes idd mapillary \
+    --val_dataset cityscapes idd mapillary  \
+    --curriculum \
+    --mix_mode 'random+' \
+    --num_classes 19 \
+    --city_mode 'train' \
+    --lr_schedule poly \
+    --lr 1e-4 \
+    --poly_exp 0.9 \
+    --max_cu_epoch 10000 \
+    --class_uniform_pct 0.5  \
+    --crop_size 768 \
+    --scale_min 0.5 \
+    --scale_max 2.0 \
+    --target_scale_min 0.5 \
+    --target_scale_max 1.2 \
+    --rrotate 0 \
+    --max_iter 20000 \
+    --bs_mult 1 \
+    --color_aug 0.5 \
+    --gblur \
+    --relax_denom 0.0 \
+    --date 0707 \
+    --incremental_ratio 0.05 \
+    --ema \
+    --exp da_final_19 \
+    --ckpt ./logs/ \
+    --tb_path ./logs/ \
+    --DT_snapshot ./pretrained/MTDT_768_19.pth \
+    --snapshot ./pretrained/AdaptSeg_MTDT_da_19.pth \
+    --self_training bars \
+    # --tensorboard_visualize
