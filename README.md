@@ -10,7 +10,7 @@
 
 ## Requirements
 Pytorch >= 1.8.0
-You need GPU with no less than 24G memory.
+You need GPU with no less than 32G memory.
 
 ## Installation
 
