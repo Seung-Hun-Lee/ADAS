@@ -1,4 +1,5 @@
 ## Pretrained Model
+We only provide pretrained models for 19 classes.
 
 |    Target   | Cityscapes |  IDD | Mapillary | Model |
 |:-----------:|:----------:|:----:|:---------:|:-----:|
@@ -10,7 +11,12 @@
 
 
 ## Training
-
+Set the hyperparameters in each script. The main ones are as follows:
+'--ckpt', '--date', and '--exp' represent the checkpoint folder, date, and experiment name, respectively. Folders for saving models and logs will be created using these parameters.
+'--tb_path' is the path where TensorBoard files will be saved.
+'--snapshot' is the path to the segmentation model to be loaded.
+'--DT_snapshot' is the path to the MTDT-Net to be loaded.
+For other parameters, refer to args.py.
 
 ### 1. Train source-only model
 
