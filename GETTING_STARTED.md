@@ -18,6 +18,13 @@ Set the hyperparameters in each script. The main ones are as follows:
 '--DT_snapshot' is the path to the MTDT-Net to be loaded.
 For other parameters, refer to [args.py](args.py).
 
+### Improvements (1)
+We regard the filtered pixels by BARS as hard samples and progressively learn a greater number of these hard samples each epoch. The option to activate this feature is '--curriculum', and it is controlled by '--incremental_ratio'.
+
+### Improvements (2)
+We extended the [DACS](https://arxiv.org/abs/2007.08702) method for self-training using BARS. Refer to [Domain_mixer.py](network/domain_mixer) for details.
+
+
 ### 1. Train source-only model
 
 ```
@@ -53,6 +60,7 @@ sh scripts/da_BARS_19.sh
 
 
 ## Test
+Input the model to be evaluated in the script using the '--snapshot' option.
 ```
 sh scripts/test_19.sh
 ```
