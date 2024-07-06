@@ -18,6 +18,8 @@ Set the hyperparameters in each script. The main ones are as follows:
 '--DT_snapshot' is the path to the MTDT-Net to be loaded.
 For other parameters, refer to [args.py](args.py).
 
+#### If you do not have more than 32G of memory, you can reduce '--crop_size' to 512 or similar. However, high performance cannot be expected in this case.
+
 
 ### 1. Train source-only model
 
