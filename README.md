@@ -46,7 +46,9 @@ We extended the [DACS](https://arxiv.org/abs/2007.08702) method for self-trainin
 }
 ```
 
+## Acknowledgement
 
-
+This repo is largely based on [RobustNet](https://github.com/shachoi/RobustNet).
+Thanks for their excellent works.
 
 
