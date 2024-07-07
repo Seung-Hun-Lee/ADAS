@@ -365,9 +365,9 @@ class ADAS_Trainer:
         self.src_iter = enumerate(self.source_train_loader)
         self.tgt_iter = enumerate(self.target_train_loader)
 
-        # if self.args.self_training == 'bars':
-        #     self.bars.init_centroid(self.source_train_loader, self.target_train_loader, 
-        #                                 self.ema_model, self.net['DT'])
+        if self.args.self_training == 'bars':
+            self.bars.init_centroid(self.source_train_loader, self.target_train_loader, 
+                                        self.ema_model, self.net['DT'])
         
         while self.i < self.args.max_iter:
             # Update EPOCH CTR
